@@ -1,0 +1,80 @@
+﻿  Simple Ray Tracer.cpp
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\vec3.h(63): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\vec3.h(142): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\hitable_list.h(27): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\camera.h(14): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\camera.h(23): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\material.h(22): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\material.h(36): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\material.h(109): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(36): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(53): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(68): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(69): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(69): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(70): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(72): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(72): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(76): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(79): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(86): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(87): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(111): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(143): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(145): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(146): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(147): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(149): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(157): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\type_traits(16707566): warning C4244: 'argument': conversion from 'size_t' to 'float', possible loss of data
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\type_traits(16707566): note: see reference to function template instantiation 'void std::_Invoker_functor::_Call<void(__cdecl *)(camera &,hitable *,float,float),_Ty,std::reference_wrapper<hitable *>,unsigned int,unsigned int>(_Callable &&,_Ty &&,std::reference_wrapper<hitable *> &&,unsigned int &&,unsigned int &&) noexcept(false)' being compiled
+          with
+          [
+              _Ty=std::reference_wrapper<camera>,
+              _Callable=void (__cdecl *)(camera &,hitable *,float,float)
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\thr\xthread(239): note: see reference to function template instantiation 'void std::invoke<void(__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int>(_Callable &&,std::reference_wrapper<camera> &&,std::reference_wrapper<hitable *> &&,unsigned int &&,unsigned int &&) noexcept(false)' being compiled
+          with
+          [
+              _Callable=void (__cdecl *)(camera &,hitable *,float,float)
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\thr\xthread(248): note: see reference to function template instantiation 'void std::_LaunchPad<_Target>::_Execute<0,1,2,3,4>(std::tuple<void (__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int> &,std::integer_sequence<_Ty,0,1,2,3,4>)' being compiled
+          with
+          [
+              _Target=std::unique_ptr<std::tuple<void (__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int>,std::default_delete<std::tuple<void (__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int>>>,
+              _Ty=::size_t
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\thr\xthread(247): note: see reference to function template instantiation 'void std::_LaunchPad<_Target>::_Execute<0,1,2,3,4>(std::tuple<void (__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int> &,std::integer_sequence<_Ty,0,1,2,3,4>)' being compiled
+          with
+          [
+              _Target=std::unique_ptr<std::tuple<void (__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int>,std::default_delete<std::tuple<void (__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int>>>,
+              _Ty=::size_t
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\thr\xthread(244): note: while compiling class template member function 'void std::_LaunchPad<_Target>::_Run(std::_LaunchPad<_Target> *) noexcept'
+          with
+          [
+              _Target=std::unique_ptr<std::tuple<void (__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int>,std::default_delete<std::tuple<void (__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int>>>
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\thr\xthread(232): note: see reference to function template instantiation 'void std::_LaunchPad<_Target>::_Run(std::_LaunchPad<_Target> *) noexcept' being compiled
+          with
+          [
+              _Target=std::unique_ptr<std::tuple<void (__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int>,std::default_delete<std::tuple<void (__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int>>>
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\thr\xthread(259): note: see reference to class template instantiation 'std::_LaunchPad<_Target>' being compiled
+          with
+          [
+              _Target=std::unique_ptr<std::tuple<void (__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int>,std::default_delete<std::tuple<void (__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int>>>
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\thread(45): note: see reference to function template instantiation 'void std::_Launch<std::unique_ptr<std::tuple<void (__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int>,std::default_delete<_Ty>>>(_Thrd_t *,_Target &&)' being compiled
+          with
+          [
+              _Ty=std::tuple<void (__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int>,
+              _Target=std::unique_ptr<std::tuple<void (__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int>,std::default_delete<std::tuple<void (__cdecl *)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,unsigned int,unsigned int>>>
+          ]
+  c:\users\gen\documents\graphics programming\ray tracer by shirley\simple ray tracer\simple ray tracer\simple ray tracer.cpp(167): note: see reference to function template instantiation 'std::thread::thread<void(__cdecl &)(camera &,hitable *,float,float),std::reference_wrapper<camera>,std::reference_wrapper<hitable *>,::size_t,::size_t,void>(_Fn,std::reference_wrapper<camera> &&,std::reference_wrapper<hitable *> &&,size_t &&,size_t &&)' being compiled
+          with
+          [
+              _Fn=void (__cdecl &)(camera &,hitable *,float,float)
+          ]
+  Simple Ray Tracer.vcxproj -> C:\Users\Gen\Documents\Graphics Programming\Ray Tracer by Shirley\Simple Ray Tracer\Debug\Simple Ray Tracer.exe
