@@ -24,9 +24,9 @@ bool sphere::bounding_box(float t0, float t1, aabb& box) const
 
 bool sphere::hit(const ray& r, float t_min, float t_max, hit_record& rec) const {
 	vec3 oc = r.origin() - center;
-	float a = dot(r.direction(), r.direction());
-	float b = dot(oc, r.direction());
-	float c = dot(oc, oc) - radius * radius;
+	float a = vec3::ToFloat(dot(r.direction(), r.direction()));
+	float b = vec3::ToFloat(dot(oc, r.direction()));
+	float c = vec3::ToFloat(dot(oc, oc)) - radius * radius;
 	float discriminant = b * b - a * c;
 	if (discriminant > 0) {
 		float temp = (-b - sqrt(discriminant)) / a;

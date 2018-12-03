@@ -12,7 +12,7 @@ vec3 random_in_unit_disk() {
 	vec3 p;
 	do {
 		p = 2.0*vec3(rnd_dist_camera(engine_generator_camera), rnd_dist_camera(engine_generator_camera), 0) - vec3(1, 1, 0);
-	} while (dot(p, p) >= 1.0);
+	} while (vec3::ToFloat(dot(p, p)) >= 1.0);
 	return p;
 }
 
@@ -36,7 +36,7 @@ public:
 	}
 	ray get_ray(float s, float t) {
 		vec3 rd = lens_radius * random_in_unit_disk();
-		vec3 offset = u * rd.x() + v * rd.y();
+		vec3 offset = u * vec3::ToFloat(rd.x()) + v * vec3::ToFloat(rd.y());
 		float time = time0 + rnd_dist_camera(engine_generator_camera)*(time1 - time0);
 		return ray(origin + offset, lower_left_corner + s * horizontal + t * vertical - origin - offset, time);
 	}

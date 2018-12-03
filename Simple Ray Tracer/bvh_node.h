@@ -1,6 +1,7 @@
 #ifndef BVHNODE
 #define BVHNODE
 
+#include "vec3.h"
 #include "hitable.h"
 #include <random>
 
@@ -58,7 +59,7 @@ int box_x_compare(const void * a, const void * b) {
 	hitable *bh = *(hitable**)b;
 	if (!ah->bounding_box(0, 0, box_left) || !bh->bounding_box(0, 0, box_right))
 		std::cerr << "no bounding box in bvh_node constructor\n";
-	if (box_left.min().x() - box_right.min().x() < 0.0)
+	if (vec3::ToFloat(box_left.min().x() - box_right.min().x()) < 0.0)
 		return -1;
 	else
 		return 1;
@@ -71,7 +72,7 @@ int box_y_compare(const void * a, const void * b)
 	hitable *bh = *(hitable**)b;
 	if (!ah->bounding_box(0, 0, box_left) || !bh->bounding_box(0, 0, box_right))
 		std::cerr << "no bounding box in bvh_node constructor\n";
-	if (box_left.min().y() - box_right.min().y() < 0.0)
+	if (vec3::ToFloat(box_left.min().y() - box_right.min().y()) < 0.0)
 		return -1;
 	else
 		return 1;
@@ -83,7 +84,7 @@ int box_z_compare(const void * a, const void * b)
 	hitable *bh = *(hitable**)b;
 	if (!ah->bounding_box(0, 0, box_left) || !bh->bounding_box(0, 0, box_right))
 		std::cerr << "no bounding box in bvh_node constructor\n";
-	if (box_left.min().z() - box_right.min().z() < 0.0)
+	if (vec3::ToFloat(box_left.min().z() - box_right.min().z()) < 0.0)
 		return -1;
 	else
 		return 1;

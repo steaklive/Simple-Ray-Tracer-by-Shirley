@@ -21,19 +21,19 @@ vec3 random_in_unit_sphere()
 	vec3 p;
 	do {
 		p = 2.0*vec3(rnd_dist_material(engine_generator_material), rnd_dist_material(engine_generator_material), rnd_dist_material(engine_generator_material)) - vec3(1, 1, 1);
-	} while (p.squared_length() >= 1.0);
+	} while (vec3::ToFloat(p.squared_length()) >= 1.0);
 
 	return p;
 }
 vec3 reflect(const vec3& v, const vec3& n)
 {
-	return v - 2 * dot(v,n)*n;
+	return v - 2 * vec3::ToFloat(dot(v,n))* n;
 }
 
 bool refract(const vec3& v, const vec3& n, float ni_over_nt, vec3& refracted)
 {
 	vec3 uv = unit_vector(v);
-	float dt = dot(uv, n);
+	float dt = vec3::ToFloat(dot(uv, n));
 	float discriminant = 1.0 - ni_over_nt * ni_over_nt*(1 - dt * dt);
 
 	if (discriminant > 0)
@@ -95,7 +95,7 @@ public:
 		vec3 reflected = reflect(unit_vector(r_in.direction()), rec.normal);
 		scattered = ray(rec.p, reflected+fuzz*random_in_unit_sphere(), r_in.time());
 		attenuation = albedo;
-		return (dot(scattered.direction(), rec.normal) > 0);
+		return (vec3::ToFloat(dot(scattered.direction(), rec.normal)) > 0);
 	}
 
 	vec3 albedo;
@@ -114,17 +114,19 @@ public:
 		vec3 refracted;
 		float reflect_prob;
 		float cosine;
-		if (dot(r_in.direction(), rec.normal) > 0) {
+		if (vec3::ToFloat(dot(r_in.direction(), rec.normal)) > 0) {
 			outward_normal = -rec.normal;
 			ni_over_nt = ref_idx;
 			//         cosine = ref_idx * dot(r_in.direction(), rec.normal) / r_in.direction().length();
-			cosine = dot(r_in.direction(), rec.normal) / r_in.direction().length();
+			cosine = vec3::ToFloat(dot(r_in.direction(), rec.normal) / r_in.direction().length());
 			cosine = sqrt(1 - ref_idx * ref_idx*(1 - cosine * cosine));
 		}
 		else {
 			outward_normal = rec.normal;
 			ni_over_nt = 1.0 / ref_idx;
-			cosine = -dot(r_in.direction(), rec.normal) / r_in.direction().length();
+
+			//dont forget -dot
+			cosine = -vec3::ToFloat(dot(r_in.direction(), rec.normal) / r_in.direction().length());
 		}
 		if (refract(r_in.direction(), outward_normal, ni_over_nt, refracted))
 			reflect_prob = schlick(cosine, ref_idx);

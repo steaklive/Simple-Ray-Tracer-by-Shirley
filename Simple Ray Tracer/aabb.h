@@ -8,6 +8,28 @@
 inline float ffmin(float a, float b) { return a < b ? a : b; }
 inline float ffmax(float a, float b) { return a > b ? a : b; }
 
+float ffmin(__m128 a, __m128 b) 
+{ 
+	float res_a[4];
+	_mm_store1_ps(&res_a[0], a);
+
+	float res_b[4];
+	_mm_store1_ps(&res_b[0], b);
+
+	return res_a[0] < res_b[0] ? res_a[0] : res_b[0];
+
+}
+float ffmax(__m128 a, __m128 b)
+{
+	float res_a[4];
+	_mm_store1_ps(&res_a[0], a);
+
+	float res_b[4];
+	_mm_store1_ps(&res_b[0], b);
+
+	return res_a[0] > res_b[0] ? res_a[0] : res_b[0]; 
+}
+
 class aabb
 {
 public:
@@ -20,7 +42,7 @@ public:
 	bool hit(const ray& r, float tmin, float tmax) const {
 		for (size_t i = 0; i < 3; i++)
 		{
-			float t0 = ffmin((_min[i]-r.origin()[i])/r.direction()[i], (_max[i] - r.origin()[i]) / r.direction()[i] );
+			float t0 = ffmin((_min[i] - r.origin()[i]) / r.direction()[i], (_max[i] - r.origin()[i]) / r.direction()[i] );
 			float t1 = ffmax((_min[i] - r.origin()[i]) / r.direction()[i], (_max[i] - r.origin()[i]) / r.direction()[i]);
 
 			tmin = ffmax(t0, tmin);

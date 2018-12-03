@@ -92,17 +92,17 @@ rotate_y::rotate_y(hitable *p, float angle) : ptr(p) {
 	for (int i = 0; i < 2; i++) {
 		for (int j = 0; j < 2; j++) {
 			for (int k = 0; k < 2; k++) {
-				float x = i * bbox.max().x() + (1 - i)*bbox.min().x();
-				float y = j * bbox.max().y() + (1 - j)*bbox.min().y();
-				float z = k * bbox.max().z() + (1 - k)*bbox.min().z();
+				float x = vec3::ToFloat(i * bbox.max().x() + (1 - i)*bbox.min().x());
+				float y = vec3::ToFloat(j * bbox.max().y() + (1 - j)*bbox.min().y());
+				float z = vec3::ToFloat(k * bbox.max().z() + (1 - k)*bbox.min().z());
 				float newx = cos_theta * x + sin_theta * z;
 				float newz = -sin_theta * x + cos_theta * z;
 				vec3 tester(newx, y, newz);
 				for (int c = 0; c < 3; c++)
 				{
-					if (tester[c] > max[c])
+					if (vec3::ToFloat(tester[c]) > vec3::ToFloat(max[c]))
 						max[c] = tester[c];
-					if (tester[c] < min[c])
+					if (vec3::ToFloat(tester[c]) < vec3::ToFloat(min[c]))
 						min[c] = tester[c];
 				}
 			}
